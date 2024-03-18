@@ -21,42 +21,17 @@ const Hero = () => {
       <H3Ribbon />
       <div className="relative flex flex-col gap-4 mx-6 mb-4 lg:mx-12 lg:mb-8 border-4 border-dotted border-[#ccc4aa] border-t-0 overflow-hidden">
         <Pattern2 />
-        <div className="flex flex-col gap-6 lg:gap-8 relative z-10">
+        <div className="flex flex-col gap-6 lg:gap-8 relative z-50">
           <H2Caption />
           <H4Date />
           <div className="flex justify-center py-4 lg:py-6">
             <ButtonSuscribe />
           </div>
         </div>
-        <div className="flex w-full h-full justify-center">
+        <div className="flex w-full h-full justify-end">
           <CircularPattern justify="end" diameter={96} className={"translate-x-8 -translate-y-48"} />
         </div>
       </div>
-
-      {/* <div className="relative mx-6 mt-4 lg:mx-12 lg:mt-8 border-4 border-dotted border-[#ccc4aa] border-b-0 overflow-hidden">
-        <CircularPattern />
-
-        <Pattern1 />
-        <div className="flex justify-center relative z-10 top-0">
-          <H1Title />
-        </div>
-      </div>
-
-      <H3Ribbon />
-
-      <div className="relative flex-1 mx-12 mb-8 border-4 border-dotted border-[#ccc4aa] border-t-0 overflow-hidden">
-        <Pattern2 />
-        <div className="relative z-10">
-          <H2Caption />
-          <H4Date />
-          <div className="flex justify-center py-8">
-            <ButtonSuscribe />
-          </div>
-        </div>
-        <div className="flex w-full h-full justify-center">
-          <CircularPattern justify="end" diameter={96} className={"translate-x-8 -translate-y-48"} />
-        </div>
-      </div> */}
     </div>
   );
 };
