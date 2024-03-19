@@ -5,7 +5,7 @@ const Pattern2 = () => {
     <div className="flex justify-center w-full h-full">
       <div className="absolute z-0 w-[400px] h-[400px] rotate-45 -translate-y-44">
         <div className="relative w-full h-full overflow-hidden">
-          <svg className="opacity-25" id="patternId" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <svg className="opacity-25" id="patternId2" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern
                 id="c"

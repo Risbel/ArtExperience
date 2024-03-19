@@ -6,7 +6,7 @@ const ConfirmButton = () => {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit">
+    <Button className="my-2" type="submit">
       <span className="font-semibold text-secondary">{!pending ? "Suscribirme" : "Loading..."}</span>
     </Button>
   );

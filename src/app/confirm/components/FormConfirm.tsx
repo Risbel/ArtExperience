@@ -8,8 +8,11 @@ const FormConfirm = () => {
   const ref = useRef<HTMLFormElement>(null);
 
   return (
-    <section id="formConfirm" className="flex justify-center w-full md:w-1/2 relative z-50 px-4 mb-8 md:mb-0 pt-12">
-      <div className="lg:w-2/3 flex flex-col items-center border-2 p-4 md:p-6 rounded-xl border-primary backdrop-blur-md">
+    <section
+      id="formConfirm"
+      className="flex justify-center items-center w-full h-full relative z-10 px-4 mb-8 md:mb-0 pt-12"
+    >
+      <div className="lg:w-1/3 flex flex-col items-center border-2 p-4 md:p-6 rounded-xl border-primary backdrop-blur-3xl">
         <div className="flex flex-col w-full mb-4">
           <p className="text-xl md:text-2xl text-center text-primary">Suscríbase aquí!</p>
         </div>
