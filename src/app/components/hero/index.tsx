@@ -10,8 +10,8 @@ import H3Caption from "./H3Caption";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col bg-secondary h-full">
-      <div className="relative flex flex-col mx-6 mt-4 lg:mx-12 lg:mt-8 border-4 border-dotted border-[#e7dfc9] rounded-2xl border-b-0 overflow-hidden">
+    <div className="flex flex-col bg-secondary">
+      <div className="relative flex flex-col mx-6 mt-4 lg:mx-12 lg:mt-8 border-4 border-dotted border-[#e7dfc9] rounded-2xl rounded-b-none border-b-0 overflow-hidden">
         <Pattern1 />
         <CircularPattern className={"-translate-x-36 -translate-y-36"} />
 
@@ -20,13 +20,13 @@ const Hero = () => {
         </div>
       </div>
       <H3Ribbon />
-      <div className="relative flex-1 flex flex-col gap-4 mx-6 mb-4 lg:mx-12 lg:mb-8 border-4 border-dotted border-[#e7dfc9] rounded-2xl border-t-0 overflow-hidden">
+      <div className="relative flex flex-col gap-4 mx-6 mb-4 lg:mx-12 lg:mb-8 border-4 border-dotted border-[#e7dfc9] rounded-2xl rounded-t-none border-t-0 overflow-hidden">
         <Pattern2 />
-        <div className="h-full flex flex-col gap-4 relative z-50">
+        <div className="flex flex-col gap-6 relative z-50">
           <H2Caption />
           <H3Caption />
           <H4Date />
-          <div className="flex justify-center">
+          <div className="flex justify-center mb-4">
             <ButtonSuscribe />
           </div>
         </div>
