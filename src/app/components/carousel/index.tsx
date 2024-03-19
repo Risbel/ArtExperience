@@ -6,13 +6,13 @@ const LogoCarousel = () => {
   const carouselBrands = useCarouselBrands();
 
   return (
-    <div className="bg-secondary w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]">
-      <ul className="flex items-center space-x-0 lg:space-x-16 animate-loop-scroll px-0 lg:px-8 [&_li]:mx-8 [&_img]:max-w-none">
+    <div className="bg-secondary w-full inline-flex flex-nowrap overflow-hidden pb-16 lg:h-64 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]">
+      <ul className="flex items-center space-x-4 lg:space-x-16 animate-loop-scroll px-0 lg:px-8 [&_li]:mx-4 [&_img]:max-w-none">
         {carouselBrands.map((item, i) => {
           return (
             <li key={i}>
               <Image
-                className="scale-75 md:scale-100"
+                className="h-40 w-40 lg:h-60 lg:w-60"
                 src={item.imageUrl}
                 alt={item.alt}
                 width={item.width}
@@ -23,14 +23,14 @@ const LogoCarousel = () => {
         })}
       </ul>
       <ul
-        className="flex items-center space-x-0 lg:space-x-16 animate-loop-scroll px-0 lg:px-8 [&_li]:mx-8 [&_img]:max-w-none"
+        className="flex items-center space-x-4 lg:space-x-16 animate-loop-scroll px-0 lg:px-8 [&_li]:mx-4 [&_img]:max-w-none"
         aria-hidden="true"
       >
         {carouselBrands.map((item, i) => {
           return (
             <li key={i}>
               <Image
-                className="scale-75 md:scale-100"
+                className="h-40 w-40 lg:h-60 lg:w-60"
                 src={item.imageUrl}
                 alt={item.alt}
                 width={item.width}

@@ -9,7 +9,7 @@ const H4Date = () => {
         initial={{ opacity: 0, y: 300 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-center w-10/12 lg:text-lg text-primary font-semibold"
+        className="text-center w-10/12 text-xs lg:text-lg text-primary font-semibold"
       >
         TE ESPERAMOS EL 20 DE ABRIL DE 2024 A LAS 18:00 HRS EN ROKABELLA
       </motion.h4>

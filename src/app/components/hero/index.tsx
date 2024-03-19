@@ -15,18 +15,18 @@ const Hero = () => {
         <Pattern1 />
         <CircularPattern className={"-translate-x-36 -translate-y-36"} />
 
-        <div className="flex justify-center relative z-20 p-6 md:p-2">
+        <div className="flex justify-center relative z-20 p-2">
           <H1Title />
         </div>
       </div>
       <H3Ribbon />
       <div className="relative flex flex-col gap-4 mx-6 mb-4 lg:mx-12 lg:mb-8 border-4 border-dotted border-[#e7dfc9] rounded-2xl rounded-t-none border-t-0 overflow-hidden">
         <Pattern2 />
-        <div className="flex flex-col gap-6 relative z-50">
+        <div className="flex flex-col gap-4 relative z-50">
           <H2Caption />
           <H3Caption />
           <H4Date />
-          <div className="flex justify-center mb-4">
+          <div className="flex justify-center mb-2">
             <ButtonSuscribe />
           </div>
         </div>

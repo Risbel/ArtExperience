@@ -10,8 +10,8 @@ export const useCarouselBrands = () => [
   {
     imageUrl: "/logo-goma.svg",
     alt: "",
-    width: 200,
-    height: 200,
+    width: 150,
+    height: 150,
     text: "",
     textSize: "",
   },
@@ -34,8 +34,8 @@ export const useCarouselBrands = () => [
   {
     imageUrl: "/logo-goma.svg",
     alt: "",
-    width: 200,
-    height: 200,
+    width: 150,
+    height: 150,
     text: "",
     textSize: "",
   },
