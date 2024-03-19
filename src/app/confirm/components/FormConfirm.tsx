@@ -14,7 +14,7 @@ const FormConfirm = () => {
     >
       <div className="lg:w-1/3 flex flex-col items-center border-2 p-4 md:p-6 rounded-xl border-primary backdrop-blur-3xl">
         <div className="flex flex-col w-full mb-4">
-          <p className="text-xl md:text-2xl text-center text-primary">Suscríbase aquí!</p>
+          <p className="text-md md:text-2xl text-center text-primary">Confirme su asistencia!</p>
         </div>
 
         <form

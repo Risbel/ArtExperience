@@ -7,7 +7,7 @@ const ConfirmButton = () => {
 
   return (
     <Button className="my-2" type="submit">
-      <span className="font-semibold text-secondary">{!pending ? "Suscribirme" : "Loading..."}</span>
+      <span className="font-semibold text-secondary">{!pending ? "Confirmar" : "Loading..."}</span>
     </Button>
   );
 };
