@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const ButtonSuscribe = () => {
   return (
     <motion.div initial={{ opacity: 0, y: 300 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-      <Button size={"lg"}>
-        <Link href={"/confirm"}>Confirmar</Link>{" "}
-      </Button>
+      <Link href={"/confirm"}>
+        <Button size={"lg"}>Confirmar</Button>
+      </Link>
     </motion.div>
   );
 };
