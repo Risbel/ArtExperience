@@ -17,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo-white.svg" sizes="any" />
+        <link rel="icon" href="/bg-black-logo-goma.png" sizes="any" />
         <link rel="icon" href="/icon?<generated>" type="image/<generated>" sizes="<generated>" />
-        <link rel="Art Experience" href="/apple-icon?<generated>" type="image/<generated>" sizes="<generated>" />
+        <link rel="apple-touch-icon" href="/apple-icon?<generated>" type="image/<generated>" sizes="<generated>" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
