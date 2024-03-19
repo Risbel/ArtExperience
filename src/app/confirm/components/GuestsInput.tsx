@@ -34,7 +34,7 @@ const GuestsInput = ({ inputList, setInputList }: { inputList: Person[]; setInpu
           <span className="text-sm text-secondary font-semibold">Añadir acompañante/s</span>
         </button>
       )}
-      {inputList.length !== 0 && <p className="text-primary pl-2 text-xs">Acompañante/s</p>}
+      {inputList.length !== 0 && <p className="text-primary pl-2 mt-2 text-xs">Acompañante/s</p>}
 
       {inputList.map((x, index) => {
         return (
