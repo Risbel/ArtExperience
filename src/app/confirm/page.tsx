@@ -5,7 +5,7 @@ import { ChevronLeft } from "lucide-react";
 
 const Confirm = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex h-screen overflow-hidden overflow-y-scroll">
       <svg
         className="opacity-35 absolute z-0 h-full"
         id="patternIdForm"
@@ -39,7 +39,10 @@ const Confirm = () => {
       >
         <ChevronLeft className="group-hover:-translate-x-2 transition-transform duration-500" /> Back
       </Link>
-      <FormConfirm />
+
+      <div className="flex w-full justify-center items-start pt-16">
+        <FormConfirm />
+      </div>
     </div>
   );
 };
