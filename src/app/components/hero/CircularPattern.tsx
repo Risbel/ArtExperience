@@ -12,8 +12,14 @@ const CircularPattern = ({
   return (
     <div className={cn("hidden lg:flex w-full h-full", `justify-${justify}`)}>
       <div className={cn("absolute z-10", `w-${diameter} h-${diameter}`)}>
-        <div className={cn("relative w-full h-full overflow-hidden rounded-full", className)}>
-          <svg className="opacity-35" id="patternId" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <div className={cn("relative w-96 h-96 overflow-hidden rounded-full", className)}>
+          <svg
+            className="opacity-35"
+            id="patternIdCircle"
+            width="100%"
+            height="100%"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <defs>
               <pattern
                 id="b"

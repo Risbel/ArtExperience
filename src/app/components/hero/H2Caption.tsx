@@ -1,10 +1,19 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const H2Caption = () => {
   return (
     <div className="flex justify-center w-full">
       <div className="lg:w-10/12 text-wrap text-center">
-        <h2 className="text-2xl lg:text-5xl text-primary font-light">
+        <motion.h2
+          initial={{ opacity: 0, y: 200 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-2xl lg:text-5xl text-primary font-light"
+        >
           Unión del Arte contemporáneo <br /> y la arquitectura
-        </h2>
+        </motion.h2>
       </div>
     </div>
   );
