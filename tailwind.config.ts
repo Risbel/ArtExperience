@@ -7,11 +7,20 @@ const config = {
   theme: {
     animation: {
       "loop-scroll": "loop-scroll 25s linear infinite",
+      "background-shine": "background-shine 4s linear infinite",
     },
     keyframes: {
       "loop-scroll": {
         from: { transform: "translateX(0)" },
         to: { transform: "translateX(-100%)" },
+      },
+      "background-shine": {
+        from: {
+          backgroundPosition: "0 0",
+        },
+        to: {
+          backgroundPosition: "-200% 0",
+        },
       },
     },
     container: {

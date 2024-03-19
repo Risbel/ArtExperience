@@ -6,25 +6,27 @@ import ButtonSuscribe from "./ButtonSuscribe";
 import Pattern1 from "./Pattern1";
 import Pattern2 from "./Pattern2";
 import CircularPattern from "./CircularPattern";
+import H3Caption from "./H3Caption";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col bg-secondary">
-      <div className="relative mx-6 mt-4 lg:mx-12 lg:mt-8 border-4 border-dotted border-[#ccc4aa] border-b-0 overflow-hidden">
+    <div className="flex flex-col bg-secondary h-full">
+      <div className="relative flex flex-col mx-6 mt-4 lg:mx-12 lg:mt-8 border-4 border-dotted border-[#e7dfc9] rounded-2xl border-b-0 overflow-hidden">
+        <Pattern1 />
         <CircularPattern className={"-translate-x-36 -translate-y-36"} />
 
-        <Pattern1 />
         <div className="flex justify-center relative z-20 p-6 md:p-2">
           <H1Title />
         </div>
       </div>
       <H3Ribbon />
-      <div className="relative flex flex-col gap-4 mx-6 mb-4 lg:mx-12 lg:mb-8 border-4 border-dotted border-[#ccc4aa] border-t-0 overflow-hidden">
+      <div className="relative flex-1 flex flex-col gap-4 mx-6 mb-4 lg:mx-12 lg:mb-8 border-4 border-dotted border-[#e7dfc9] rounded-2xl border-t-0 overflow-hidden">
         <Pattern2 />
-        <div className="flex flex-col gap-6 lg:gap-8 relative z-50">
+        <div className="h-full flex flex-col gap-4 relative z-50">
           <H2Caption />
+          <H3Caption />
           <H4Date />
-          <div className="flex justify-center py-4 lg:py-6">
+          <div className="flex justify-center">
             <ButtonSuscribe />
           </div>
         </div>
