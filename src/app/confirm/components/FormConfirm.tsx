@@ -4,6 +4,7 @@ import { addConfirmations } from "@/app/actions/confirmActions";
 import { useRef, useState } from "react";
 import ConfirmButton from "./ConfirmButton";
 import GuestsInput, { Person } from "./GuestsInput";
+import { redirect } from "next/navigation";
 
 const FormConfirm = () => {
   const [inputList, setInputList] = useState<Person[]>([]);
@@ -20,6 +21,7 @@ const FormConfirm = () => {
         action={async (formData) => {
           await addConfirmations(formData, inputList);
           ref.current?.reset();
+          redirect("/");
         }}
         className="flex flex-col w-full"
       >

@@ -6,23 +6,29 @@ const contactInfo = [
     alt: "locate",
     width: 30,
     height: 30,
-    text: "822 665 374 / 605 620 857",
+    text: (
+      <span>
+        Calle Tagara 16 Res <br /> Las Torres Local 7,38670 Adeje, TF.
+      </span>
+    ),
     textSize: "",
+    redirect: "https://artgoma.com/contacto/",
   },
   {
     imageUrl: "/mail-svgrepo-com.svg",
     alt: "mail",
     width: 30,
     height: 30,
-    text: "info@roca.es",
+    text: "info@artgoma.com",
     textSize: "",
+    redirect: "https://artgoma.com/contacto/",
   },
   {
     imageUrl: "/phone-flip-svgrepo-com.svg",
     alt: "phone",
     width: 30,
     height: 30,
-    text: "www.roca.es",
+    text: "+34 722 335 337",
     textSize: "",
   },
   {
@@ -30,12 +36,9 @@ const contactInfo = [
     alt: "worldwide",
     width: 30,
     height: 30,
-    text: (
-      <span>
-        Calle Tagara 16 Res <br /> Las Torres Local 7,38670 Adeje, TF.
-      </span>
-    ),
+    text: "artgoma.com",
     textSize: "",
+    redirect: "https://artgoma.com/",
   },
 ];
 
@@ -44,12 +47,43 @@ const ContactInfo = () => {
     <div>
       <div className="bg-white/20 backdrop-blur-sm w-12 h-72 absolute -z-0 rounded-t-xl"></div>
       <div className="translate-y-4 flex flex-col gap-3">
-        {contactInfo.map((item, i) => (
-          <div className="flex gap-5 relative z-20 pl-2" key={i}>
-            <Image className="scale-75" src={item.imageUrl} alt={item.alt} width={item.width} height={item.height} />
-            <p className="text-white text-md lg:text-xl font-light">{item.text}</p>
-          </div>
-        ))}
+        {contactInfo.map((item, i) =>
+          item.redirect ? (
+            <a
+              key={i}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`${item.redirect}`}
+              className="flex gap-5 relative z-20 pl-2 group"
+            >
+              <Image
+                className="scale-75 group-hover:scale-90"
+                src={item.imageUrl}
+                alt={item.alt}
+                width={item.width}
+                height={item.height}
+              />
+
+              <span className="text-white text-md lg:text-xl font-light group-hover:translate-x-2 transition-transform">
+                {item.text}
+              </span>
+            </a>
+          ) : (
+            <div key={i} className="flex gap-5 relative z-20 pl-2 group">
+              <Image
+                className="scale-75 group-hover:scale-90"
+                src={item.imageUrl}
+                alt={item.alt}
+                width={item.width}
+                height={item.height}
+              />
+
+              <span className="text-white text-md lg:text-xl font-light group-hover:translate-x-2 transition-transform">
+                {item.text}
+              </span>
+            </div>
+          )
+        )}
       </div>
     </div>
   );

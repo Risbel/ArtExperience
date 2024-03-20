@@ -2,7 +2,6 @@ import React from "react";
 import FormConfirm from "./components/FormConfirm";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
-import Footer from "../components/footer/Footer";
 
 const Confirm = () => {
   return (

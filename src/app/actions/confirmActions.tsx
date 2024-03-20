@@ -42,7 +42,7 @@ export const addConfirmations = async (e: FormData, inputList: Person[]) => {
   }
 };
 
-export const getSubscriptions = async () => {
+export const getConfirmations = async () => {
   try {
     const res = await fetch("https://artworld-api.myaipeople.com/api/subscriptions/", {
       cache: "no-cache",
