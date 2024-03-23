@@ -1,12 +1,9 @@
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { IConfirmations } from "../actions/confirmTypes";
-import { getConfirmations } from "../actions/confirmActions";
+import ConfirmationsList from "./components/ConfirmationsList";
 
-const Subscriptions = async () => {
-  const confirmations: IConfirmations = await getConfirmations();
-
+const Subscriptions = () => {
   return (
     <div className="relative">
       <svg
@@ -36,32 +33,15 @@ const Subscriptions = async () => {
         <rect width="100%" height="100%" transform="translate(0,0)" fill="url(#form)" />
       </svg>
 
-      <div className="p-4 lg:p-16 relative">
-        <div className="flex">
-          <Link className="flex bg-primary text-secondary hover:opacity-90 pr-3 py-2 rounded-lg shadow-md" href={"/"}>
-            <ChevronLeft /> <span className="font-semibold">Go back</span>
-          </Link>
-        </div>
+      <div className="p-4 lg:p-16 relative h-screen overflow-hidden overflow-y-scroll">
+        <Link
+          className="flex bg-primary text-secondary hover:opacity-90 pr-3 py-2 rounded-lg shadow-md w-[100px] text-nowrap"
+          href={"/"}
+        >
+          <ChevronLeft /> <span className="font-semibold">Go back</span>
+        </Link>
 
-        <div className="flex flex-col items-center p-8">
-          <h1 className="text-3xl font-semibold text-[#51412e]">Confirmations:</h1>
-          <div className="flex flex-wrap gap-4 py-8">
-            {confirmations.results.map((item) => {
-              return (
-                <div
-                  className="w-full lg:w-auto border-2 border-primary p-4 rounded-xl bg-white/80 shadow-xl"
-                  key={item.id}
-                >
-                  <p className="font-semibold text-[#51412e] text-xl">👤 {item.name}</p>
-                  <p>✉️ {item.email}</p>
-                  <p>📞 {item.phone}</p>
-                  <p>🗺️ {item.address}</p>
-                  <p>Company: {item.company}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        <ConfirmationsList />
       </div>
     </div>
   );

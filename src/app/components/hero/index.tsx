@@ -10,7 +10,7 @@ import H3Caption from "./H3Caption";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col bg-secondary">
+    <section id="1" className="flex flex-col bg-secondary">
       <div className="relative flex flex-col mx-6 mt-4 lg:mx-12 lg:mt-8 border-4 border-dotted border-[#e7dfc9] rounded-2xl rounded-b-none border-b-0 overflow-hidden">
         <Pattern1 />
         <CircularPattern className={"-translate-x-36 -translate-y-36"} />
@@ -34,7 +34,7 @@ const Hero = () => {
           <CircularPattern justify="end" diameter={96} className={"translate-x-8 -translate-y-48"} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

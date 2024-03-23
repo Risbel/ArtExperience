@@ -1,3 +1,5 @@
+"use server";
+
 import { revalidateTag } from "next/cache";
 import { IConfirmations } from "./confirmTypes";
 import { Person } from "../confirm/components/GuestsInput";

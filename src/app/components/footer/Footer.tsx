@@ -4,7 +4,7 @@ import Social from "./Social";
 
 const Footer = () => {
   return (
-    <div className="relative h-72 w-full overflow-hidden">
+    <section id="3" className="relative h-72 w-full overflow-hidden">
       <div className="absolute z-30 top-8 left-3 lg:left-12">
         <ContactInfo />
       </div>
@@ -12,7 +12,7 @@ const Footer = () => {
         <Social />
       </div>
       <div className="absolute -z-10 bg-primary backdrop-blur-xl h-full w-full"></div>
-    </div>
+    </section>
   );
 };
 
