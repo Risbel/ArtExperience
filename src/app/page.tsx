@@ -3,6 +3,7 @@ import LogoCarousel from "./components/carousel";
 import Footer from "./components/footer/Footer";
 import Hero from "./components/hero";
 import Link from "next/link";
+import LinkEncoded from "./components/hero/LinkEncoded";
 
 export default function Home() {
   return (
@@ -18,12 +19,7 @@ export default function Home() {
         >
           contact
         </a>
-        <Link
-          href={"/confirmations"}
-          className="hover:-translate-y-[3px] hover:shadow-lg transition-transform duration-300"
-        >
-          <LockIcon className="stroke-primary fill-white/80" />
-        </Link>
+        <LinkEncoded />
       </nav>
 
       <Hero />
