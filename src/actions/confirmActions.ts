@@ -2,7 +2,7 @@
 
 import { revalidateTag } from "next/cache";
 import { IConfirmations } from "./confirmTypes";
-import { Person } from "../confirm/components/GuestsInput";
+import { Person } from "../app/confirm/components/GuestsInput";
 
 export const addConfirmations = async (e: FormData, inputList: Person[]) => {
   const name = e.get("name")?.toString();

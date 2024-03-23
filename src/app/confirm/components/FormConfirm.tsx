@@ -1,6 +1,6 @@
 "use client";
 
-import { addConfirmations } from "@/app/actions/confirmActions";
+import { addConfirmations } from "@/actions/confirmActions";
 import { useRef, useState } from "react";
 import ConfirmButton from "./ConfirmButton";
 import GuestsInput, { Person } from "./GuestsInput";
