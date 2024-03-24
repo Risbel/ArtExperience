@@ -5,27 +5,31 @@ import { IConfirmations } from "./confirmTypes";
 import { Person } from "../app/confirm/components/GuestsInput";
 
 export const addConfirmations = async (e: FormData, inputList: Person[]) => {
-  const name = e.get("name")?.toString();
+  const event = e.get("event")?.toString();
+  const first_name = e.get("first_name")?.toString();
+  const last_name = e.get("last_name")?.toString();
   const phone = e.get("phone")?.toString();
   const email = e.get("email")?.toString();
   const address = e.get("address")?.toString();
   const company = e.get("company")?.toString();
-  const guests: Person[] = inputList;
+  const companions: Person[] = inputList;
 
-  if (!name || !phone || !email) {
+  if (!first_name || !phone || !email) {
     return;
   }
 
   const newSubscription = {
-    name,
+    event,
+    first_name,
+    last_name,
     phone,
     email,
     address,
     company,
-    guests,
+    companions,
   };
 
-  await fetch("https://artworld-api.myaipeople.com/api/subscriptions/", {
+  await fetch(`https://artworld-api.myaipeople.com/api/subscriptions/`, {
     method: "POST",
     body: JSON.stringify(newSubscription),
     headers: {
@@ -37,11 +41,14 @@ export const addConfirmations = async (e: FormData, inputList: Person[]) => {
 };
 
 export const getConfirmations = async () => {
-  const res = await fetch("https://artworld-api.myaipeople.com/api/subscriptions/", {
-    next: {
-      tags: ["subscriptions"],
-    },
-  });
+  const res = await fetch(
+    `https://artworld-api.myaipeople.com/api/subscriptions_by_event/ba688a61-71bb-4677-b180-8d40f3c82796/`,
+    {
+      next: {
+        tags: ["subscriptions"],
+      },
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

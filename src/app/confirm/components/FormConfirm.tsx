@@ -25,20 +25,38 @@ const FormConfirm = () => {
         }}
         className="flex flex-col w-full"
       >
-        <div>
-          <label className="pl-2 text-xs text-primary" htmlFor="name">
-            Full name
-          </label>
-          <input
-            required
-            className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
-            placeholder="Full name"
-            min={2}
-            type="text"
-            name="name"
-            id="name"
-            autoComplete="name"
-          />
+        <input type="text" hidden defaultValue={"ba688a61-71bb-4677-b180-8d40f3c82796"} name="event" />
+        <div className="flex gap-2">
+          <div className="flex flex-col w-2/5">
+            <label className="pl-2 text-xs text-primary" htmlFor="first_name">
+              first name
+            </label>
+            <input
+              required
+              className="border pl-2 py-1 rounded-md h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
+              placeholder="first name"
+              min={2}
+              type="text"
+              name="first_name"
+              id="first_name"
+              autoComplete="name"
+            />
+          </div>
+          <div className="flex flex-col flex-1">
+            <label className="pl-2 text-xs text-primary" htmlFor="last_name">
+              last name
+            </label>
+            <input
+              required
+              className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
+              placeholder="last name"
+              min={2}
+              type="text"
+              name="last_name"
+              id="last_name"
+              autoComplete="additional-name"
+            />
+          </div>
         </div>
         <div>
           <label className="pl-2 text-xs text-primary" htmlFor="email">

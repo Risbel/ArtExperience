@@ -49,14 +49,33 @@ const Subscriptions = async () => {
             {confirmations.results.map((item) => {
               return (
                 <div
-                  className="w-full lg:w-auto border-2 border-primary p-4 rounded-xl bg-white/40 backdrop-blur-sm shadow-xl"
+                  className="flex flex-wrap justify-between gap-8 w-full lg:w-auto border-2 border-primary p-4 rounded-xl bg-white/40 backdrop-blur-sm shadow-xl"
                   key={item.id}
                 >
-                  <p className="font-semibold text-[#51412e] text-xl">👤 {item.name}</p>
-                  <p>✉️ {item.email}</p>
-                  <p>📞 {item.phone}</p>
-                  <p>🗺️ {item.address}</p>
-                  <p>Company: {item.company}</p>
+                  <div>
+                    <p className="font-semibold text-[#51412e] text-xl">
+                      👤 {item.first_name} {item.last_name}
+                    </p>
+                    <p>✉️ {item.email}</p>
+                    <p>📞 {item.phone}</p>
+                    <p>🗺️ {item.address}</p>
+                    <p>Company: {item.company}</p>
+                  </div>
+
+                  {item.companions.length > 0 && (
+                    <div className="flex-1 flex flex-col">
+                      <p className="text-xl font-semibold text-[#51412e]">Companioons:</p>
+                      <ul>
+                        {item.companions.map((item) => {
+                          return (
+                            <li key={item.id}>
+                              ▪️ {item.first_name} {item.last_name}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               );
             })}

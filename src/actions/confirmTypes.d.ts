@@ -5,7 +5,8 @@ export interface IConfirmations {
   results: [
     {
       id: string;
-      name: string;
+      first_name: string;
+      last_name: string;
       phone: string;
       email: string;
       address: string;
@@ -13,6 +14,17 @@ export interface IConfirmations {
       is_active: boolean;
       created_at: string;
       updated_at: string;
+      companions: [
+        {
+          id: string;
+          first_name: string;
+          last_name: string;
+          subscription: string;
+          is_active: boolean;
+          created_at: string;
+          updated_at: string;
+        }
+      ];
     }
   ];
 }
