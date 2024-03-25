@@ -1,0 +1,39 @@
+{
+  "home": {
+    "h3Ribbon": "Invito",
+    "caption1": "Unione dell'Arte Contemporanea e dell'Architettura",
+    "caption2": "Goditi 3 artisti che dipingono dal vivo!",
+    "date": "TI ASPETTIAMO IL 20 APRILE 2024 ALLE 18:00 PRESSO ROKABELLA",
+    "button": "Conferma"
+  },
+  "navbar": {
+    "contact": "contattaci"
+  },
+  "footer": {
+    "address": "Calle Tagara 16 Res Las Torres Local 7,38670 Adeje, TF."
+  },
+  "form": {
+    "linkBack": "Indietro",
+    "title": "Conferma la tua presenza",
+    "labels": {
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "email": "Email",
+      "phone": "Telefono",
+      "address": "Indirizzo (opzionale)",
+      "company": "Azienda (opzionale)"
+    },
+    "placeHolder": {
+      "firstName": "nome",
+      "lastName": "cognome",
+      "email": "email ad esempio risbel@gmail.com",
+      "phone": "telefono ad esempio +53 54353930",
+      "address": "indirizzo (opzionale)",
+      "company": "azienda (opzionale)"
+    },
+    "buttons": {
+      "addCompanion": "Aggiungi accompagnatori",
+      "confirm": "Conferma"
+    }
+  }
+}

@@ -31,7 +31,7 @@ const Hero = async ({ lang }: { lang: Locale }) => {
           <H3Caption lang={home.caption2} />
           <H4Date lang={home.date} />
           <div className="flex justify-center mb-2">
-            <ButtonSuscribe lang={home.button} />
+            <ButtonSuscribe lang={lang} />
           </div>
         </div>
         <div className="flex w-full h-full justify-end">

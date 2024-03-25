@@ -15,13 +15,13 @@ export default function Switcher() {
   };
 
   return (
-    <ul className="flex items-center gap-1">
+    <ul className="flex items-center">
       {i18n.locales.map((locale) => {
         return (
           <Link
             key={locale}
             href={redirectedPathName(locale)}
-            className="flex items-center rounded-xl border bg-primary shadow-xl scale-125 px-1 py-1 text-white"
+            className="flex text-xs items-center rounded-xl border bg-primary hover:sshadow-xl hover:scale-125 transition-transform p-2 py-1 text-white"
           >
             {locale}
           </Link>

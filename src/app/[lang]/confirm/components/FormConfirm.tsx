@@ -5,15 +5,18 @@ import { useRef, useState } from "react";
 import ConfirmButton from "./ConfirmButton";
 import GuestsInput, { Person } from "./GuestsInput";
 import { redirect } from "next/navigation";
+import { useDictionary } from "@/providers/DictionaryProvider";
 
 const FormConfirm = () => {
   const [inputList, setInputList] = useState<Person[]>([]);
   const ref = useRef<HTMLFormElement>(null);
 
+  const { form } = useDictionary();
+
   return (
     <div className="flex flex-col border-2 p-4 md:p-6 rounded-xl border-primary backdrop-blur-3xl">
       <div className="flex flex-col w-full mb-4">
-        <p className="text-md md:text-2xl text-center text-primary">Confirme su asistencia!</p>
+        <p className="text-md md:text-2xl text-center text-primary">{form.title}</p>
       </div>
 
       <form
@@ -29,12 +32,12 @@ const FormConfirm = () => {
         <div className="flex gap-2">
           <div className="flex flex-col w-2/5">
             <label className="pl-2 text-xs text-primary" htmlFor="first_name">
-              first name
+              {form.labels.firstName}
             </label>
             <input
               required
               className="border pl-2 py-1 rounded-md h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
-              placeholder="first name"
+              placeholder={form.placeHolder.firstName}
               min={2}
               type="text"
               name="first_name"
@@ -44,12 +47,12 @@ const FormConfirm = () => {
           </div>
           <div className="flex flex-col flex-1">
             <label className="pl-2 text-xs text-primary" htmlFor="last_name">
-              last name
+              {form.labels.lastName}
             </label>
             <input
               required
               className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
-              placeholder="last name"
+              placeholder={form.placeHolder.lastName}
               min={2}
               type="text"
               name="last_name"
@@ -60,12 +63,12 @@ const FormConfirm = () => {
         </div>
         <div>
           <label className="pl-2 text-xs text-primary" htmlFor="email">
-            Email
+            {form.labels.email}
           </label>
           <input
             required
             className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
-            placeholder="Email"
+            placeholder={form.placeHolder.email}
             min={2}
             type="email"
             name="email"
@@ -75,12 +78,12 @@ const FormConfirm = () => {
         </div>
         <div>
           <label className="pl-2 text-xs text-primary" htmlFor="phone">
-            Phone
+            {form.labels.phone}
           </label>
           <input
             required
             className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
-            placeholder="phone"
+            placeholder={form.placeHolder.phone}
             min={2}
             type="tel"
             name="phone"
@@ -91,11 +94,11 @@ const FormConfirm = () => {
 
         <div>
           <label className="pl-2 text-xs text-primary" htmlFor="address">
-            Address (optional)
+            {form.labels.address}
           </label>
           <input
             className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
-            placeholder="Address"
+            placeholder={form.placeHolder.address}
             min={2}
             type="text"
             name="address"
@@ -106,11 +109,11 @@ const FormConfirm = () => {
 
         <div>
           <label className="pl-2 text-xs text-primary" htmlFor="company">
-            Company (optional)
+            {form.labels.company}
           </label>
           <input
             className="border pl-2 py-1 rounded-md w-full h-8 md:h-10 text-xs md:text-base text-[#383529] border-primary"
-            placeholder="Company"
+            placeholder={form.placeHolder.company}
             min={2}
             type="text"
             name="company"

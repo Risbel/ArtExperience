@@ -2,8 +2,12 @@ import React from "react";
 import FormConfirm from "./components/FormConfirm";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
+import { Locale } from "@/configs/i18n.config";
+import { getDictionary } from "@/configs/dictionary";
 
-const Confirm = () => {
+const Confirm = async ({ params: { lang } }: { params: { lang: Locale } }) => {
+  const { form } = await getDictionary(lang);
+
   return (
     <>
       <svg
@@ -35,9 +39,9 @@ const Confirm = () => {
       <div className="relative flex h-screen overflow-hidden overflow-y-auto">
         <Link
           className="flex items-center fixed z-20  left-4 top-4 lg:left-8 lg:top-8 text-xl text-primary bg-secondary border-2 border-primary pl-2 pr-4 py-1 rounded-xl hover:bg-[#bcb9978a] transition-colors group"
-          href={"/"}
+          href={`/${lang}`}
         >
-          <ChevronLeft className="group-hover:-translate-x-2 transition-transform duration-500" /> Back
+          <ChevronLeft className="group-hover:-translate-x-2 transition-transform duration-500" /> {form.linkBack}
         </Link>
 
         <div className="flex w-screen justify-center items-start pt-20">

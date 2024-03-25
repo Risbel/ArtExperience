@@ -1,0 +1,39 @@
+{
+  "home": {
+    "h3Ribbon": "Einladung",
+    "caption1": "Vereinigung von zeitgenössischer Kunst und Architektur",
+    "caption2": "Genießen Sie 3 Künstler, die live malen!",
+    "date": "WIR ERWARTEN SIE AM 20. APRIL 2024 UM 18:00 UHR BEI ROKABELLA",
+    "button": "Bestätigen"
+  },
+  "navbar": {
+    "contact": "Kontaktieren Sie uns"
+  },
+  "footer": {
+    "address": "Calle Tagara 16 Res Las Torres Local 7, 38670 Adeje, TF."
+  },
+  "form": {
+    "linkBack": "Zurück",
+    "title": "Bestätigen Sie Ihre Teilnahme",
+    "labels": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "address": "Adresse (optional)",
+      "company": "Firma (optional)"
+    },
+    "placeHolder": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail z.B. risbel@gmail.com",
+      "phone": "Telefon z.B. +53 54353930",
+      "address": "Adresse (optional)",
+      "company": "Firma (optional)"
+    },
+    "buttons": {
+      "addCompanion": "Begleiter hinzufügen",
+      "confirm": "Bestätigen"
+    }
+  }
+}

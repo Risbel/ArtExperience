@@ -1,3 +1,5 @@
+import { getDictionary } from "@/configs/dictionary";
+import { Locale } from "@/configs/i18n.config";
 import Image from "next/image";
 
 const contactInfo = [
@@ -42,7 +44,9 @@ const contactInfo = [
   },
 ];
 
-const ContactInfo = () => {
+const ContactInfo = async ({ lang }: { lang: Locale }) => {
+  const { footer } = await getDictionary(lang);
+
   return (
     <div>
       <div className="bg-white/20 backdrop-blur-sm w-12 h-72 absolute -z-0 rounded-t-xl"></div>
@@ -65,7 +69,7 @@ const ContactInfo = () => {
               />
 
               <span className="text-white text-md lg:text-xl font-light group-hover:translate-x-2 transition-transform">
-                {item.text}
+                {item.alt === "locate" ? `${footer.address}` : item.text}
               </span>
             </a>
           ) : (

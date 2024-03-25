@@ -1,3 +1,4 @@
+import { useDictionary } from "@/providers/DictionaryProvider";
 import { PlusCircle, Trash } from "lucide-react";
 
 export interface Person {
@@ -6,6 +7,8 @@ export interface Person {
 }
 
 const GuestsInput = ({ inputList, setInputList }: { inputList: Person[]; setInputList: any }) => {
+  const { form } = useDictionary();
+
   const handleinputchange = ({ e, index }: { e: any; index: any }) => {
     const { name, value } = e.target;
     const list: any = [...inputList];
@@ -31,7 +34,7 @@ const GuestsInput = ({ inputList, setInputList }: { inputList: Person[]; setInpu
           onClick={() => handleaddclick()}
         >
           <PlusCircle className="stroke-secondary" />
-          <span className="text-sm text-secondary font-semibold">Añadir acompañante/s</span>
+          <span className="text-sm text-secondary font-semibold">{form.buttons.addCompanion}</span>
         </button>
       )}
       {inputList.length !== 0 && <p className="text-primary pl-2 mt-2 text-xs">Acompañante/s</p>}
@@ -41,8 +44,8 @@ const GuestsInput = ({ inputList, setInputList }: { inputList: Person[]; setInpu
           <div key={index} className="border border-primary rounded-xl p-2 mb-2 bg-white">
             <div className="flex gap-2 items-center">
               <div className="flex flex-col">
-                <label className="text-xs text-primary" htmlFor={`first_name${index}`}>
-                  First Name
+                <label className="text-xs text-primary pl-2" htmlFor={`first_name${index}`}>
+                  {form.labels.firstName}
                 </label>
                 <input
                   required
@@ -50,15 +53,15 @@ const GuestsInput = ({ inputList, setInputList }: { inputList: Person[]; setInpu
                   type="text"
                   name={`first_name`}
                   id={`first_name${index}`}
-                  placeholder="First Name"
+                  placeholder={form.labels.firstName}
                   onChange={(e) => handleinputchange({ e, index })}
                   autoComplete="name"
                   autoCapitalize="on"
                 />
               </div>
               <div className="flex flex-col">
-                <label className="text-xs text-primary" htmlFor={`last_name${index}`}>
-                  Last Name
+                <label className="text-xs text-primary pl-2" htmlFor={`last_name${index}`}>
+                  {form.labels.lastName}
                 </label>
                 <input
                   required
@@ -66,7 +69,7 @@ const GuestsInput = ({ inputList, setInputList }: { inputList: Person[]; setInpu
                   type="text"
                   name={`last_name`}
                   id={`last_name${index}`}
-                  placeholder="Last Name"
+                  placeholder={form.labels.lastName}
                   onChange={(e) => handleinputchange({ e, index })}
                   autoComplete="additional-name"
                   autoCapitalize="on"
@@ -78,11 +81,10 @@ const GuestsInput = ({ inputList, setInputList }: { inputList: Person[]; setInpu
             </div>
             {inputList.length - 1 === index && (
               <button
-                className="flex gap-1 items-center border rounded-lg px-2 py-1 my-2 bg-green-600 hover:bg-green-500 transition-colors"
+                className="flex gap-1 items-center border rounded-full my-2 bg-green-600 hover:bg-green-500 transition-colors"
                 onClick={() => handleaddclick()}
               >
                 <PlusCircle className="stroke-secondary" />
-                <span className="text-sm text-secondary font-semibold">Añadir acompañante</span>
               </button>
             )}
           </div>
