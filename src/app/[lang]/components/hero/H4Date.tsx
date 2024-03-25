@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const H4Date = () => {
+const H4Date = ({ lang }: { lang: string }) => {
   return (
     <div className="flex justify-center">
       <motion.h4
@@ -11,7 +11,7 @@ const H4Date = () => {
         transition={{ duration: 1 }}
         className="text-center w-10/12 text-xs lg:text-lg text-primary font-semibold"
       >
-        TE ESPERAMOS EL 20 DE ABRIL DE 2024 A LAS 18:00 HRS EN ROKABELLA
+        {lang}
       </motion.h4>
     </div>
   );

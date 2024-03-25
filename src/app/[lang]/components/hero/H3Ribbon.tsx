@@ -1,7 +1,8 @@
 "use client";
+
 import { motion } from "framer-motion";
 
-const H3Ribbon = () => {
+const H3Ribbon = ({ lang }: { lang: string }) => {
   return (
     <div className="relative z-20 bg-primary w-full flex justify-center items-center shadow-lg shadow-gray-500 py-3">
       <motion.h3
@@ -10,7 +11,7 @@ const H3Ribbon = () => {
         transition={{ duration: 1 }}
         className="text-2xl lg:text-6xl font-light tracking-widest text-primary-foreground"
       >
-        INVITACIÓN
+        {lang}
       </motion.h3>
     </div>
   );

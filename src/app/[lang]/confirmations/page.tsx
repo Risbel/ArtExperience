@@ -1,7 +1,7 @@
+import { getConfirmations } from "@/actions/confirmActions";
+import { IConfirmations } from "@/actions/confirmTypes";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
-import { IConfirmations } from "../../actions/confirmTypes";
-import { getConfirmations } from "../../actions/confirmActions";
 
 const Subscriptions = async () => {
   const confirmations: IConfirmations = await getConfirmations();
@@ -87,3 +87,5 @@ const Subscriptions = async () => {
 };
 
 export default Subscriptions;
+
+export const runtime = "edge";

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const H2Caption = () => {
+const H2Caption = ({ lang }: { lang: string }) => {
   return (
     <div className="flex justify-center w-full">
       <div className="lg:w-10/12 text-wrap text-center">
@@ -12,7 +12,7 @@ const H2Caption = () => {
           transition={{ duration: 1 }}
           className="text-2xl lg:text-5xl text-primary font-light"
         >
-          Unión del Arte contemporáneo <br /> y la arquitectura
+          {lang}
         </motion.h2>
       </div>
     </div>

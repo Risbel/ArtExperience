@@ -1,14 +1,17 @@
-import { HomeIcon, LockIcon } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 import LogoCarousel from "./components/carousel";
 import Footer from "./components/footer/Footer";
 import Hero from "./components/hero";
-import Link from "next/link";
 import LinkEncoded from "./components/hero/LinkEncoded";
 
-export default function Home() {
+import { Locale } from "@/configs/i18n.config";
+import Switcher from "./components/hero/Switcher";
+
+export default function Home({ params: { lang } }: { params: { lang: Locale } }) {
   return (
     <div className="h-screen overflow-y-scroll scroll-smooth">
       <nav className="flex items-center gap-2 absolute z-[100] right-3 top-4 lg:right-20 lg:top-8 bg-[#514830]/10 backdrop-blur-sm px-2 lg:px-4 py-1 lg:py-2 rounded-3xl">
+        <Switcher />
         <a className="hover:-translate-y-[3px] hover:shadow-lg transition-transform duration-300" href="#1">
           <HomeIcon className="stroke-primary fill-white/80" />
         </a>
@@ -22,9 +25,11 @@ export default function Home() {
         <LinkEncoded />
       </nav>
 
-      <Hero />
+      <Hero lang={lang} />
       <LogoCarousel />
       <Footer />
     </div>
   );
 }
+
+export const runtime = "edge";

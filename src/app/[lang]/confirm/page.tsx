@@ -49,3 +49,5 @@ const Confirm = () => {
 };
 
 export default Confirm;
+
+export const runtime = "edge";

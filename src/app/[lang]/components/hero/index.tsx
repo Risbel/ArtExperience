@@ -7,8 +7,12 @@ import Pattern1 from "./Pattern1";
 import Pattern2 from "./Pattern2";
 import CircularPattern from "./CircularPattern";
 import H3Caption from "./H3Caption";
+import { Locale } from "@/configs/i18n.config";
+import { getDictionary } from "../../../../configs/dictionary";
 
-const Hero = () => {
+const Hero = async ({ lang }: { lang: Locale }) => {
+  const { home } = await getDictionary(lang);
+
   return (
     <section id="1" className="flex flex-col bg-secondary">
       <div className="relative flex flex-col mx-6 mt-4 lg:mx-12 lg:mt-8 border-4 border-dotted border-[#e7dfc9] rounded-2xl rounded-b-none border-b-0 overflow-hidden">
@@ -19,15 +23,15 @@ const Hero = () => {
           <H1Title />
         </div>
       </div>
-      <H3Ribbon />
+      <H3Ribbon lang={home.h3Ribbon} />
       <div className="relative flex flex-col gap-4 mx-6 mb-4 lg:mx-12 lg:mb-8 border-4 border-dotted border-[#e7dfc9] rounded-2xl rounded-t-none border-t-0 overflow-hidden">
         <Pattern2 />
         <div className="flex flex-col gap-4 relative z-50">
-          <H2Caption />
-          <H3Caption />
-          <H4Date />
+          <H2Caption lang={home.caption1} />
+          <H3Caption lang={home.caption2} />
+          <H4Date lang={home.date} />
           <div className="flex justify-center mb-2">
-            <ButtonSuscribe />
+            <ButtonSuscribe lang={home.button} />
           </div>
         </div>
         <div className="flex w-full h-full justify-end">
