@@ -8,7 +8,7 @@ import Pattern2 from "./Pattern2";
 import CircularPattern from "./CircularPattern";
 import H3Caption from "./H3Caption";
 import { Locale } from "@/configs/i18n.config";
-import { getDictionary } from "../../../../configs/dictionary";
+import { getDictionary } from "@/configs/dictionary";
 
 const Hero = async ({ lang }: { lang: Locale }) => {
   const { home } = await getDictionary(lang);
@@ -31,7 +31,7 @@ const Hero = async ({ lang }: { lang: Locale }) => {
           <H3Caption lang={home.caption2} />
           <H4Date lang={home.date} />
           <div className="flex justify-center mb-2">
-            <ButtonSuscribe lang={lang} />
+            <ButtonSuscribe />
           </div>
         </div>
         <div className="flex w-full h-full justify-end">

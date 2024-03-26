@@ -1,13 +1,17 @@
 {
+  "dropdown": {
+    "title": "Sprachen",
+    "languages": ["Englisch", "Spanisch", "Französisch", "Italienisch", "Russisch", "Deutsch"]
+  },
+  "navbar": {
+    "contact": "Kontaktieren Sie uns"
+  },
   "home": {
     "h3Ribbon": "Einladung",
     "caption1": "Vereinigung von zeitgenössischer Kunst und Architektur",
     "caption2": "Genießen Sie 3 Künstler, die live malen!",
     "date": "WIR ERWARTEN SIE AM 20. APRIL 2024 UM 18:00 UHR BEI ROKABELLA",
     "button": "Bestätigen"
-  },
-  "navbar": {
-    "contact": "Kontaktieren Sie uns"
   },
   "footer": {
     "address": "Calle Tagara 16 Res Las Torres Local 7, 38670 Adeje, TF."

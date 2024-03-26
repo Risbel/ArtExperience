@@ -1,13 +1,17 @@
 {
+  "dropdown": {
+    "title": "Languages",
+    "languages": ["English", "Spanish", "French", "Italian", "Russian", "German"]
+  },
+  "navbar": {
+    "contact": "Contact us"
+  },
   "home": {
     "h3Ribbon": "Invitation",
     "caption1": "Union of Contemporary Art and Architecture",
     "caption2": "Enjoy 3 artists painting live!",
     "date": "WE AWAIT YOU ON APRIL 20, 2024, AT 18:00 HRS AT ROKABELLA",
     "button": "Confirm"
-  },
-  "navbar": {
-    "contact": "Contact us"
   },
   "footer": {
     "address": "Calle Tagara 16 Res Las Torres Local 7, 38670 Adeje, TF."

@@ -2,10 +2,11 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Locale } from "@/configs/i18n.config";
 import { useDictionary } from "@/providers/DictionaryProvider";
+import { usePathname } from "next/navigation";
 
-const ButtonSuscribe = ({ lang }: { lang: Locale }) => {
+const ButtonSuscribe = () => {
+  const lang = usePathname();
   const { home } = useDictionary();
 
   return (
