@@ -14,11 +14,12 @@ import { i18n } from "@/configs/i18n.config";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useDictionary } from "@/providers/DictionaryProvider";
-import { flags } from "./flags.json";
+import * as flagsObj from "./flags.json";
 
 const NavbarDropdown = () => {
   const pathName = usePathname();
   const { dropdown } = useDictionary();
+  const { flags } = flagsObj;
 
   const redirectedPathName = (locale: string) => {
     if (!pathName) return "/";
@@ -43,7 +44,7 @@ const NavbarDropdown = () => {
         <DropdownMenuSeparator />
         {i18n.locales.map((locale, i) => {
           return (
-            <DropdownMenuItem>
+            <DropdownMenuItem key={locale}>
               <Link
                 key={locale}
                 href={redirectedPathName(locale)}

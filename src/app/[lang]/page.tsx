@@ -3,8 +3,7 @@ import Footer from "./components/footer/Footer";
 import Hero from "./components/hero";
 
 import { Locale } from "@/configs/i18n.config";
-
-import Navbar from "./components/navbar";
+import { Navbar } from "./components/navbar";
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
   return (
