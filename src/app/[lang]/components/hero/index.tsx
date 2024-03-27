@@ -25,7 +25,7 @@ const Hero = async ({ lang }: { lang: Locale }) => {
         </div>
       </div>
       <H3Ribbon lang={home.h3Ribbon} />
-      <div className="relative flex flex-col gap-4 mx-6 lg:mx-12 lg:mb-8 border-4 border-dotted border-[#e7dfc9] border-y-0 overflow-hidden">
+      <div className="relative flex flex-col gap-4 mx-6 lg:mx-12 mb-2 border-4 border-dotted border-[#e7dfc9] border-y-0 overflow-hidden">
         <Pattern2 />
         <div className="flex flex-col lg:gap-4 relative z-50">
           <H2Caption lang={home.caption1} />
