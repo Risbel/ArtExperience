@@ -9,7 +9,7 @@ const H4Date = ({ lang }: { lang: string }) => {
         initial={{ opacity: 0, y: 300 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-center w-10/12 text-xs lg:text-lg text-primary font-semibold"
+        className="text-center w-10/12 text-xs lg:text-lg text-primary"
       >
         {lang}
       </motion.h4>
