@@ -48,7 +48,6 @@ export const getConfirmations = async () => {
         tags: ["subscriptions"],
         revalidate: 3600,
       },
-      cache: "default",
     }
   );
 

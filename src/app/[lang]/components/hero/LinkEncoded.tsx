@@ -30,7 +30,7 @@ const LinkEncoded = () => {
           className="hover:-translate-y-[3px] hover:shadow-lg transition-transform duration-300"
           onClick={redirectEncoded}
         >
-          <LockIcon className="stroke-primary fill-white/80" />
+          <LockIcon height={20} className="stroke-primary fill-white/80" />
         </TooltipTrigger>
         <TooltipContent>
           <p>reserved for admins</p>

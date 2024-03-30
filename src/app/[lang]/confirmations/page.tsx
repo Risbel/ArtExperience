@@ -64,7 +64,7 @@ const Subscriptions = async () => {
 
                   {item.companions.length > 0 && (
                     <div className="flex-1 flex flex-col">
-                      <p className="text-xl font-semibold text-[#51412e]">Companioons:</p>
+                      <p className="text-xl font-semibold text-[#51412e]">Companions:</p>
                       <ul>
                         {item.companions.map((item) => {
                           return (
