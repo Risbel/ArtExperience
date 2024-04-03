@@ -32,7 +32,7 @@ const H2Caption = ({ lang }: { lang: string }) => {
                 return (
                   <span
                     key={i}
-                    className="pl-1 text-md md:text-xl lg:text-2xl text-transparent text-shadow shadow-[#94805774] font-bold animate-background-shine bg-[linear-gradient(110deg,#332f14,45%,#89896c,55%,#24210c)] bg-[length:250%_100%] bg-clip-text"
+                    className="pl-1 tracking-wider text-lg md:text-xl lg:text-2xl text-transparent text-shadow shadow-[#94805774] font-bold animate-background-shine bg-[linear-gradient(110deg,#332f14,45%,#89896c,55%,#24210c)] bg-[length:250%_100%] bg-clip-text"
                   >
                     {word}
                   </span>
