@@ -8,7 +8,7 @@ const Social = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={"https://facebook.com/theartgomagallery"}
+          href={"https://www.facebook.com/damtenerife.tenerife"}
           className="hover:scale-105"
         >
           <Image
@@ -22,7 +22,7 @@ const Social = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={"https://www.instagram.com/theartgomagallery"}
+          href={"https://www.instagram.com/damtenerife/"}
           className="hover:scale-105"
         >
           <Image
@@ -31,21 +31,6 @@ const Social = () => {
             height={50}
             width={50}
             alt="instagram icon"
-          />
-        </a>
-
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={"https://www.youtube.com/@ArtGoMA"}
-          className="hover:scale-105"
-        >
-          <Image
-            className="h-6 w-6 lg:h-12 lg:w-12"
-            src={"/youtube-icon.svg"}
-            height={50}
-            width={50}
-            alt="youtube icon"
           />
         </a>
       </div>
