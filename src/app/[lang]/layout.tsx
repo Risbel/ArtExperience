@@ -5,8 +5,32 @@ import DictionaryProvider from "@/providers/DictionaryProvider";
 import { getDictionary } from "@/configs/dictionary";
 
 export const metadata: Metadata = {
-  title: "Art Experience",
-  description: "Event Art Experience",
+  title: "ArtExperince",
+  keywords: ["art experience", "Art Goma", "Arte en Tenerife", "arte contemporáneo"],
+  authors: [{ name: "Karen" }],
+  creator: "Karen",
+  description: "Estás invitado a ArtExperice, una experiencia unica donde se fusionan Arte y Arquitectura.",
+  openGraph: {
+    title: "ArtExperience",
+    description: "Evento ArtExperice, experiencia única donde se fusionan Arte y Arquitectura.",
+    url: "https://art-experience.pages.dev",
+    siteName: "Art Experince",
+    images: [
+      {
+        url: "https://art-experience.pages.dev/logo-ArtExperince-og.jpg",
+        width: 800,
+        height: 800,
+        alt: "ArtExperience",
+      },
+    ],
+    type: "website",
+    locale: "es",
+  },
+  icons: {
+    icon: ["/favicon.ico"],
+    apple: ["/apple-touch-icon.png"],
+    shortcut: ["/apple-touch-icon.png"],
+  },
 };
 
 export async function generateStaticParams() {
@@ -24,11 +48,6 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang}>
-      <head>
-        <link rel="icon" href="/bg-black-logo-goma.png" sizes="any" />
-        <link rel="icon" href="/icon?<generated>" type="image/<generated>" sizes="<generated>" />
-        <link rel="apple-touch-icon" href="/apple-icon?<generated>" type="image/<generated>" sizes="<generated>" />
-      </head>
       <body>
         <DictionaryProvider dictionary={dictionary}>{children}</DictionaryProvider>
       </body>
